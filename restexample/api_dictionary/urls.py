@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import word_detail, word_list
+from .views import WordAPIView, WordRUD
 
 urlpatterns = [
-    path('word/', word_list, name='word_list'),
-    path('word_detail/<pk>/', word_detail, name='word_detail'),
+    path('word/', WordAPIView.as_view(), name='WordAPIView'),
+    path('wordRUD/<id>/', WordRUD.as_view(), name='WordRUD'),
 ]
