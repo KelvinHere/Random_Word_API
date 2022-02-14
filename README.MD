@@ -16,10 +16,20 @@ Returned JSON structure below
 }
 ```
 
+## Deployment
+* Requirements
+    * Local computer with docker & docker-compose installed
+
+1. Clone this repo to local workspace
+1. From the working directory run docker-compose up
+1. The image will be built and activated, database is populated via fixtures so can take a minuet or more to load depending on local hardware
+1. The terminal will give you IP and port to access project, remember /word to call the API
+
 ## Technologies
 * Docker
+* Docker-compose
 * Django
-* Django Rest
+* Django-Rest-Framework
 
 ### Acknowledgements
 
