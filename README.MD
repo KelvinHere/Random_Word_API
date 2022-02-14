@@ -1,6 +1,6 @@
-# Dictionary API
+# Random Word API
 
-Allows user to request a random word and its meaning from the dictionary
+An API that returns a random word and its meaning from a dictionary.  Using Dockerized Django REST
 
 ## How to call the API
 /word will return json containing a random word and its meaning.
@@ -15,6 +15,11 @@ Returned JSON structure below
     "meaning": "Of or pertaining to cosmography."
 }
 ```
+
+## Technologies
+* Docker
+* Django
+* Django Rest
 
 ### Acknowledgements
 
