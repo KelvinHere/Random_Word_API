@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  web-server:
+    build: .
+    command: >
+      sh -c "python restexample/manage.py migrate &&
+             python restexample/manage.py loaddata dictionary.json
+             python restexample/manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/work
+    ports:
+      - "8000:8000"
