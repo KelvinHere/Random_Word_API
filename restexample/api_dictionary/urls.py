@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import GenericAPIView
+from .views import WordList, WordDetail
 
 urlpatterns = [
-    path('generic/word/', GenericAPIView.as_view(), name='GenericAPIView'),
-    path('generic/word/<int:id>/', GenericAPIView.as_view(), name='GenericAPIView'),
+    path('word/', WordList.as_view()),
+    path('word/<int:id>/', WordDetail.as_view()),
 ]
