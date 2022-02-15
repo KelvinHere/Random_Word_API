@@ -1,5 +1,6 @@
 from random import choice
 from urllib import response
+from django.http import HttpResponse
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -7,6 +8,10 @@ from rest_framework.authentication import BasicAuthentication, SessionAuthentica
 from rest_framework.permissions import IsAdminUser
 from .models import Word
 from .serializers import WordSerializer
+
+
+def home(request):
+    return HttpResponse("<b>Random Word Home Page<b> <br><br> Ask for a random word with /word")
 
 
 class RandomWord(APIView):
