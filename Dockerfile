@@ -8,6 +8,5 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /restexample
 COPY requirements.txt /restexample/
 RUN pip install -r requirements.txt \
-    && pip install djangorestframework \
-    && 
+    && pip install djangorestframework
 COPY . /restexample/
